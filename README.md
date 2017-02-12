@@ -15,54 +15,64 @@ __Hard drive size:__ 500GB SSD, 3TB SATA
 
 ### Steps to Software Installation/Configuration
 - Install Nvidia drivers
-  >  
+  > We will install the latest Nvidia drivers because apt-get will give us old versions, [Nvidia Download Website](http://www.nvidia.fr/Download/index.aspx)
 
-  - ```sudo add-apt-repository ppa:graphics-drivers/ppa```
-  - ```sudo apt-get update```
-  - ```sudo apt-get install nvidia-367```
-  - restart = ```sudo reboot```
+  - ```sudo service lightdm stop```
+  - ```ctrl+alt+f2```
+  - ```sudo init 3```
+  - ```sudo sh NVIDIA-Linux-x86_64-375.30.run```
+  - ```sudo reboot```
 
-- Install CUDA 7.5
-  > I am installing CUDA 7.5 because tensorflow does not work with 8.0 yet. We have to use another version of gcc and g++ since 5.4 is not compatible. Also we will install CUDA 7.5 installer for Ubuntu 14.04 version it won't be much difference.
+- Installing CUDA
+  > We will first install the toolkit Go to [Nvidia CUDA Website](https://developer.nvidia.com/cuda-release-candidate-download). Choose **Linux > x86_64 > Ubuntu > 16.04 > runfile (local)**
 
-  - ```sudo apt-get install gcc-4.9```
-  - ```sudo apt-get install g++-4.9```
-  - ```sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 10```
-  - ```sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20```
-  - ```sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 10```
-  - ```sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20```
-  - ```wget linkToCUDA7.5Installer```
-  - ```sudo sh cuda_7.5.18_linux.run --override```
+  > Say no when asked if you want to install the driver because we installed the latest version already.
 
-  ```bash
-  Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 352.39? ((y)es/(n)o/(q)uit): no
-  Install the CUDA 7.5 Toolkit? ((y)es/(n)o/(q)uit): yes
-  Enter Toolkit Location [ default is /usr/local/cuda-7.5 ]:
-  Do you want to install a symbolic link at /usr/local/cuda? ((y)es/(n)o/(q)uit): yes
-  Install the CUDA 7.5 Samples? ((y)es/(n)o/(q)uit): no
-  Installing the CUDA Toolkit in /usr/local/cuda-7.5 ...
+  - ```sudo sh cuda_8.0.61_375.26_linux.run --override```
+
+  > Now we have to update the paths in .bashrc
+
+  ```BASH
+  cd
+  gedit .bashrc
   ```
-  - Then add following to .bashrc
-  - ```echo 'export PATH=/usr/local/cuda/bin:$PATH' >> ~/.bashrc```
-  - ```echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc```
-  - ```source ~/.bashrc```
 
+  Add following to the bottom of the file and save.
 
-- Install Cudnn
-  - Download source code [here](https://developer.nvidia.com/rdp/form/cudnn-download-survey)
-  - ```tar xvf cudnn-7.5-linux-x64-v5.1-prod.tgz```
-  - ```sudo cp cuda/include/cudnn.h /usr/local/cuda/include/```
-  - ```sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/```
-  - ```sudo chmod a+r /usr/local/cuda/lib64/libcudnn*```
+  ```BASH
+  export CUDA_HOME=/usr/local/cuda-8.0
+  export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+  export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+  ```
+
+  Now we need to reload the .bashrc and we will check if the paths are properly modified.
+
+  ```BASH
+  source ~/.bashrc
+  echo $CUDA_HOME
+  echo $PATH
+  echo $LD_LIBRARY_PATH
+  ```
+
+- Install cuDNN
+  > Go to [Nvidia cuDNN website](https://developer.nvidia.com/cudnn) download the latest for CUDA 8.0 and linux
+
+  ```BASH
+  tar xvzf cudnn-8.0-linux-x64-v5.1.tgz
+  cd cuda
+  sudo cp include/cudnn.h /usr/local/cuda-8.0/include/
+  sudo cp lib64/* /usr/local/cuda-8.0/lib64/
+  ```
+
 
 - Install Chrome
-  >
 
-  - ```wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb```
-  - ```sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb```
-  - ```sudo apt-get install -f```
-  - ```rm google-chrome-stable_current_amd64.deb```
-
+  ```BASH
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+  sudo apt-get install -f
+  rm google-chrome-stable_current_amd64.deb
+  ```
   > <span style="color:red">If chrome lags when you highlight or something just go and unchecked Use 'Hardware acceleration if available' in advance settings of chrome settings</span>
 
 - Configure workspaces in Ubuntu
@@ -107,13 +117,13 @@ __Hard drive size:__ 500GB SSD, 3TB SATA
 - Install Anaconda Python Distribution
   > Anaconda distribution is really easy Python distributor that I can manage my libraries.
 
-  - Download Anaconda Python 2.7 from [here](https://www.continuum.io/downloads)
-  - ```bash Downloads/Anaconda2-4.1.1-Linux-x86_64.sh```
+  - Download Anaconda Python 3.6 from [here](https://www.continuum.io/downloads)
+  - ```bash Downloads/Anaconda3-6.1.1-Linux-x86_64.sh```
 
 - Install tensorflow with GPU
 
   - Create virtual machine
-  - ```conda create -n tf python=2.7```
+  - ```conda create -n tf python=3.6```
   - ```source activate tf```
   - ```pip install --upgrade pip```
   - ```pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl```
