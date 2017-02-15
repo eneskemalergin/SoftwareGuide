@@ -154,3 +154,8 @@ __Hard drive size:__ 500GB SSD, 3TB SATA
   > Now let's install octave kernel for Jupyter from conda-forge:
 
   - ```conda install -c conda-forge octave_kernel=0.25.1```
+
+- Installing R Kernels for Jupyter
+  > RStudio is an amazing environment, but I am really used to using Jupyter Notebooks for notes and tutorials. I will be installing R Essentials bundle with 80 popular libraries to install R Kernel. 
+
+  - ```conda install -c r r-essentials```
