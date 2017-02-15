@@ -141,3 +141,16 @@ __Hard drive size:__ 500GB SSD, 3TB SATA
   - ```wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb```
   - ```sudo gdebi -n rstudio-0.99.896-amd64.deb```
   - ```rm rstudio-0.99.896-amd64.deb```
+
+- Install Octave and Octave Kernel for Jupyter
+  > I like to use octave for fast machine learning model prototyping. And of course I love to use octave in my best notebook. (for non-GUI octave use ```octave-cli``` command in terminal)
+
+  > To install Octave I use PPA:
+
+  - ``` sudo apt-add-repository ppa:octave/stable ```
+  - ``` sudo apt-get update```
+  - ``` sudo apt-get install octave```
+
+  > Now let's install octave kernel for Jupyter from conda-forge:
+
+  - ```conda install -c conda-forge octave_kernel=0.25.1```
