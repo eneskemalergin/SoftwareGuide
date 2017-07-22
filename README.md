@@ -4,24 +4,24 @@
 
 __Operating System and System type / version:__ Ubuntu 16.04.2 LTS
 
-__Processor type and speed:__ Intel i5 6600K, 3.5 GHz
+__Processor type and speed:__ Ryzen 7 1700x, 16 Threat, 3.4 to 3.8 GHz
 
-__RAM amount:__ 64GB
+__RAM amount:__ 32GB
 
-__GPU:__ Nvidia 1070 gtx, 8GB
+__GPU:__ Nvidia 1080 gtx, 8GB
 
-__Hard drive size:__ 1 TB SSD, 3TB SATA
+__Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 
 
 ### Steps to Software Installation/Configuration
 - Install Nvidia drivers
-  > We will install the latest Nvidia drivers because apt-get will give us old versions, [Nvidia Download Website](http://www.nvidia.fr/Download/index.aspx)
+  > ~~We will install the latest Nvidia drivers because apt-get will give us old versions, [Nvidia Download Website](http://www.nvidia.fr/Download/index.aspx)~~
+  > Ubuntu 16.04 Nvidia ppa now has 375 and it seems stable so we will go with that now.
 
-  - ```sudo service lightdm stop```
-  - ```ctrl+alt+f2```
-  - ```sudo init 3```
-  - ```sudo sh NVIDIA-Linux-x86_64-375.39.run```
-  - ```sudo reboot```
+  - ```sudo add-apt-repository ppa:graphics-drivers/ppa```
+  - ```sudo apt update```
+  - ```sudo apt-get install nvidia-375```
+  - ```sudo reboot``` # Restarts your system
 
 - Install some required packages:
 
@@ -29,14 +29,26 @@ __Hard drive size:__ 1 TB SSD, 3TB SATA
   - ```sudo apt-get install software-properties-common```
 
 - Installing CUDA
-  > We will first install the toolkit Go to [Nvidia CUDA Website](https://developer.nvidia.com/cuda-release-candidate-download). Choose **Linux > x86_64 > Ubuntu > 16.04 > runfile (local)**
+  > We will first install the toolkit Go to [Nvidia CUDA Website](https://developer.nvidia.com/cuda-release-candidate-download). Choose **Linux > x86_64 > Ubuntu > 16.04 > deb(local)**
 
-  > Say no when asked if you want to install the driver because we installed the latest version already.
+  - ```sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb```
+  - ```sudo apt-get update```
+  - ```sudo apt-get install cuda```
 
-  - ```sudo sh cuda_8.0.61_375.26_linux.run```
+  > Then we add the path updates to the .bashrc with the following oneliners.
 
-  - Install cuDNN
-    > Go to [Nvidia cuDNN website](https://developer.nvidia.com/cudnn) download the latest for CUDA 8.0 and linux (cuDNN v5.1)
+  - ```export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}```
+  - ```export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}```
+
+  > To test the CUDA if it's working:
+
+  - ```cd /usr/local/cuda-8.0/samples/5_Simulations/nbody```
+  - ```sudo make```
+  - ```./nbody```
+
+
+- Install cuDNN
+    > Go to [Nvidia cuDNN website](https://developer.nvidia.com/cudnn) download the latest for CUDA 8.0 and linux  Carefull because we will be using cuDNN v5.1 for our setup.
 
     ```BASH
     $ sudo tar -xzvf cudnn-8.0-linux-x64-v5.1.tgz
@@ -44,41 +56,6 @@ __Hard drive size:__ 1 TB SSD, 3TB SATA
     $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
     $ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
     ```
-
-
-  > Now we have to update the paths in .bashrc
-
-  ```BASH
-  nano ~/.bashrc
-  ```
-
-  Add following to the bottom of the file and save.
-
-  ```BASH
-  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
-  export CUDA_HOME=/usr/local/cuda
-  ```
-
-  Now we need to reload the .bashrc and we will check if the paths are properly modified.
-
-  ```BASH
-  source ~/.bashrc
-  echo $CUDA_HOME
-  echo $PATH
-  echo $LD_LIBRARY_PATH
-  ```
-
-- Install Bazel
-
-  > You can find instructions from [Bazel](http://www.bazel.io/docs/install.html) Website too.
-
-  ```BASH
-  $ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-  $ curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add -
-  $ sudo apt-get update
-  $ sudo apt-get install bazel
-  $ sudo apt-get upgrade bazel
-  ```
 
 - Install Anaconda Python Distribution
   > Anaconda distribution is really easy Python distributor that I can manage my libraries.
@@ -88,26 +65,9 @@ __Hard drive size:__ 1 TB SSD, 3TB SATA
 
 - Install Tensorflow
 
-  > To prepare TensorFlow installation and running, we need to create a conda environment, say, called ```tensorflow```
-
-  - ```conda create -n tensorflow```
-  - ```source activate tensorflow```
-  - ```pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.1-cp36-cp36m-linux_x86_64.whl```
-
-  > Check if the installation is working:
-
-  - ```python```
-  - ```import tensorflow```
-
-  > You should see something like this:
-
-  ```BASH
-  I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so locally
-  I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so locally
-  I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so locally
-  I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
-  I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so locally
-  ```
+  - For dependencies: ```sudo apt-get install libcupti-dev```
+  - Then we install Tensorflow with pip: ```pip install tensorflow-gpu```
+  
 
 - Install Chrome
 
