@@ -15,7 +15,6 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 
 ### Steps to Software Installation/Configuration
 - Install Nvidia drivers
-  > ~~We will install the latest Nvidia drivers because apt-get will give us old versions, [Nvidia Download Website](http://www.nvidia.fr/Download/index.aspx)~~
   > Ubuntu 16.04 Nvidia ppa now has 375 and it seems stable so we will go with that now.
 
   - ```sudo add-apt-repository ppa:graphics-drivers/ppa```
@@ -206,3 +205,15 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 - Install GooglePlayMusic Desktop Player
   - [Link to Installer Website](https://www.googleplaymusicdesktopplayer.com)
   - Install it with Gdebi installer
+
+- Install BleachBit 
+  > To keep things neat and clean
+  - [Link to Installer](https://www.bleachbit.org/download/file/t?file=bleachbit_1.12_all_ubuntu1604.deb)
+  - Install it with Gdebi installer
+  
+- Install PomoDoneApp 
+  > This is the time tracking app that I've integrated with Trello
+  - [Link to Installer](https://app.pomodoneapp.com/installers/PomoDoneApp-1.5.1084.deb)
+  - Install it with Gdebi installer
+  
+  
