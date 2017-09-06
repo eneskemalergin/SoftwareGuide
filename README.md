@@ -131,4 +131,10 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo gdebi -n rstudio-xenial-1.0.153-amd64.deb```
   - ```rm rstudio-xenial-1.0.153-amd64.deb```
 
-
+- Install Mendeley Desktop 
+  > Mendeley is a beautiful way to keep track of papers.
+  
+  - ```wget https://www.mendeley.com/repositories/ubuntu/stable/amd64/mendeleydesktop-latest```
+  - ```sudo dpkg -i mendeleydesktop```
+  - ```sudo apt-get update```
+  - ```sudo rm mendeleydesktop```
