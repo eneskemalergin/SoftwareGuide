@@ -85,12 +85,14 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - If you want to configure new shortcuts:
     - System Settings > Keyboard > Shortcuts > Navigation > You can assign new shortcuts
 
-- Install vim
+- Install gdebi package manager
+  > Gdebi is a better way to install deb files for me.
+  - ```sudo apt-get install gdebi```
 
+- Install vim
   - ```sudo apt-get install vim```
 
 - Install git
-
   - ```sudo apt-get install git```
   - ```git config --global user.name "name"```
   - ```git config --global user.email "email"```
@@ -200,3 +202,7 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   ```
 - Install VLC for Video
   - ```sudo apt install vlc```
+
+- Install GooglePlayMusic Desktop Player
+  - [Link to Installer Website](https://www.googleplaymusicdesktopplayer.com)
+  - Install it with Gdebi installer
