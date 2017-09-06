@@ -99,8 +99,6 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   > It is really nice command line tool to see and control system
   - ```sudo apt-get install htop```
 
-
-
 - Install Atom text editor
 
   - ```sudo add-apt-repository ppa:webupd8team/atom```
@@ -110,13 +108,15 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 - Install a good Theme for Ubuntu
   > It is really nice to have a new look...
 
- - ```sudo apt install unity-tweak-tool```
- - ```sudo apt-add-repository ppa:numix/ppa```
- - ```sudo apt-get update```
- - ```sudo apt-get install numix-icon-theme numix-folders```
- - ```sudo apt-get install numix-icon-theme-circle```
- - ```sudo apt-get install numix-icon-theme-square```
-  - Open unity tweak tool
+   - ```sudo apt install unity-tweak-tool```
+   - ```sudo apt-add-repository ppa:numix/ppa```
+   - ```sudo apt-get update```
+   - ```sudo apt-get install numix-gtk-theme```
+   - ```sudo apt-get install numix-icon-theme numix-folders```
+   - ```sudo apt-get install numix-icon-theme-circle```
+   - ```sudo apt-get install numix-icon-theme-square```
+   - Open unity tweak tool
+   - Select __Appearance > Theme and Icons__
 
 - Install R and RStudio
   > I love R since it's amazing tool for statistics and learning mathematical background of most algorithms. Also Rstudio is really high quality interpreter for R.
@@ -128,23 +128,7 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo apt-get install r-base r-base-dev```
   - ```sudo apt-get install gdebi-core```
   - ```wget https://download1.rstudio.org/rstudio-xenial-1.0.153-amd64.deb```
-  - ```sudo gdebi -n rstudio-0.99.896-amd64.deb```
-  - ```rm rstudio-0.99.896-amd64.deb```
+  - ```sudo gdebi -n rstudio-xenial-1.0.153-amd64.deb```
+  - ```rm rstudio-xenial-1.0.153-amd64.deb```
 
-- Install Octave and Octave Kernel for Jupyter
-  > I like to use octave for fast machine learning model prototyping. And of course I love to use octave in my best notebook. (for non-GUI octave use ```octave-cli``` command in terminal)
 
-  > To install Octave I use PPA:
-
-  - ``` sudo apt-add-repository ppa:octave/stable ```
-  - ``` sudo apt-get update```
-  - ``` sudo apt-get install octave```
-
-  > Now let's install octave kernel for Jupyter from conda-forge:
-
-  - ```conda install -c conda-forge octave_kernel=0.25.1```
-
-- Installing R Kernels for Jupyter
-  > RStudio is an amazing environment, but I am really used to using Jupyter Notebooks for notes and tutorials. I will be installing R Essentials bundle with 80 popular libraries to install R Kernel.
-
-  - ```conda install -c r r-essentials```
