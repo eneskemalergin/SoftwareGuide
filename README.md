@@ -105,6 +105,10 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo apt-get update```
   - ```sudo apt-get install atom```
 
+- Install Restricted Extras for Ubuntu
+  > package of several codecs that are not included by default in Ubuntu system, media codecs and Flash Support.
+  - ```sudo apt-get install ubuntu-restricted-extras```
+
 - Install a good Theme for Ubuntu
   > It is really nice to have a new look...
 
@@ -194,3 +198,5 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   [randr]
   screen=0
   ```
+- Install VLC for Video
+  - ```sudo apt install vlc```
