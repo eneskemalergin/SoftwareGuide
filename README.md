@@ -110,13 +110,13 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 - Install a good Theme for Ubuntu
   > It is really nice to have a new look...
 
-  - ```mkdir ~/.icons```
-  - ```sudo apt install unity-tweak-tool```
-  - ```sudo add-apt-repository ppa:noobslab/icons2```
-  - ```sudo apt-get update```
-  - ```sudo apt-get install square-icons```
+ - ```sudo apt install unity-tweak-tool```
+ - ```sudo apt-add-repository ppa:numix/ppa```
+ - ```sudo apt-get update```
+ - ```sudo apt-get install numix-icon-theme numix-folders```
+ - ```sudo apt-get install numix-icon-theme-circle```
+ - ```sudo apt-get install numix-icon-theme-square```
   - Open unity tweak tool
-  - Appearance > Icons > select square-light or square-dark
 
 - Install R and RStudio
   > I love R since it's amazing tool for statistics and learning mathematical background of most algorithms. Also Rstudio is really high quality interpreter for R.
