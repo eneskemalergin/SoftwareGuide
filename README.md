@@ -138,3 +138,59 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo dpkg -i mendeleydesktop```
   - ```sudo apt-get update```
   - ```sudo rm mendeleydesktop```
+
+- Install Redshift (Night Shift software)
+  > Since I usually work at night and the light from the screen is too much, so I use redshift and configure it.
+  
+  - ```sudo apt-get install redshift gtk-redshift geoclue```
+  - ```vim ~/.config/redshift.conf```
+  - Copy and Paste the following in the vim:
+  ```BASH
+  ; Global settings for redshift
+  [redshift]
+  ; Set the day and night screen temperatures
+  temp-day=4500
+  temp-night=3500
+
+  ; Enable/Disable a smooth transition between day and night
+  ; 0 will cause a direct change from day to night screen temperature.
+  ; 1 will gradually increase or decrease the screen temperature
+  transition=1
+
+  ; Set the screen brightness. Default is 1.0
+  ;brightness=0.8
+  ; It is also possible to use different settings for day and night since version
+  ; 1.8.
+  brightness-day=0.9
+  brightness-night=0.7
+  ; Set the screen gamma (for all colors, or each color channel individually)
+  gamma=0.8
+  ;gamma=0.8:0.7:0.8
+
+  ; Set the location-provider. Type 'redshift -l list' to see possible values.
+  ; The location provider settings are in a different section.
+  location-provider=geoclue2
+
+  ; Set the adjustment-method: 'randr', 'vidmode'
+  ; type 'redshift -m list' to see all possible values
+  ; 'randr' is the preferred method, 'vidmode' is an older API
+  ; but works in some cases when 'randr' does not.
+  ; The adjustment method settings are in a different section.
+  adjustment-method=randr
+
+  ; Configuration of the location-provider:
+  ; type 'redshift -l PROVIDER:help' to see the settings
+  ; ex: 'redshift -l manual:help'
+  [manual]
+  ; set these values if you've set the location-provider to manual instead of
+  ; geoclue
+  ;lat=51.522698
+  ;lon=-0.085358
+
+  ; Configuration of the adjustment-method
+  ; type 'redshift -m METHOD:help' to see the settings
+  ; ex: 'redshift -m randr:help'
+
+  [randr]
+  screen=0
+  ```
