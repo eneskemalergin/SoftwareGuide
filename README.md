@@ -62,6 +62,12 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - Download Anaconda Python 3.6 from [here](https://www.continuum.io/downloads)
   - ```bash Downloads/Anaconda3-4.3.1-Linux-x86_64.sh```
 
+- Install Jupyter Themes 
+  > Installing the most updated version of jupyterthemes
+  - ```pip install --upgrade jupyterthemes```
+  - ```jt -t solarizedl -T -N``` 
+  
+
 - Install Tensorflow
 
   - For dependencies: ```sudo apt-get install libcupti-dev```
