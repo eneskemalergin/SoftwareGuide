@@ -227,4 +227,8 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - [Link to Installer](https://app.pomodoneapp.com/installers/PomoDoneApp-1.5.1084.deb)
   - Install it with Gdebi installer
   
+- Install Slack
+  > Slack is a group messaging app.
+  - [Link to Install Page](https://slack.com/downloads/linux)
+  - Install it with Gdebi installer
   
