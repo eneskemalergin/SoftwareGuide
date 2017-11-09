@@ -212,7 +212,7 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo add-apt-repository ppa:otto-kesselgulasch/gimp-edge```
   - ```sudo apt update && sudo apt install gimp gimp-gmic```
   
-- Install Inkspace for Vector Design
+- Install Inkscape for Vector Design
   > This is a open source software that does similar job as Adobe Illustrator 
   
   - ```sudo add-apt-repository ppa:inkscape.dev/stable```
