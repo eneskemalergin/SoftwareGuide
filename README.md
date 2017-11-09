@@ -204,11 +204,20 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
 
   [randr]
   screen=0
-```
+  ```
+
 - Install GIMP for image editing
   > This is a similar software like Photoshop for linux
+  
   - ```sudo add-apt-repository ppa:otto-kesselgulasch/gimp-edge```
   - ```sudo apt update && sudo apt install gimp gimp-gmic```
+  
+- Install Inkspace for Vector Design
+  > This is a open source software that does similar job as Adobe Illustrator 
+  
+  - ```sudo add-apt-repository ppa:inkscape.dev/stable```
+  - ```sudo apt update```
+  - ```sudo apt install inkscape```
   
 - Install VLC for Video
   - ```sudo apt install vlc```
