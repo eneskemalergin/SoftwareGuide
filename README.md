@@ -129,6 +129,10 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
    - Open unity tweak tool
    - Select __Appearance > Theme and Icons__
 
+- Install a Latex related tools 
+  > When I create reports I create from Jupyter Notebook to PDF and Latex is the intermediary step of it.
+  - ```sudo apt update && sudo apt install texlive-full```
+
 - Install R and RStudio
   > I love R since it's amazing tool for statistics and learning mathematical background of most algorithms. Also Rstudio is really high quality interpreter for R.
 
