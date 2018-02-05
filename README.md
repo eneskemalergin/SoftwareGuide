@@ -146,6 +146,11 @@ __Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
   - ```sudo gdebi -n rstudio-xenial-1.1.383-amd64.deb```
   - ```rm rstudio-xenial-1.1.383-amd64.deb```
 
+- Installing needed development packages for some of R libraries
+
+  - ```sudo apt-get install libnetcdf-dev```
+  - ```sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev````
+
 - Install Mendeley Desktop 
   > Mendeley is a beautiful way to keep track of papers.
   
