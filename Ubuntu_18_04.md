@@ -45,7 +45,7 @@ __Hard drive size:__  1 TB SSD, 3TB SATA
 
 - **Installing general Use software:**
   - ```sudo apt-get install openjdk-8-jdk build-essential libcurl3-dev```
-  - ```sudo apt-get install vim git htop
+  - ```sudo apt-get install vim git htop```
   - ```sudo apt-get install software-properties-common```
 
 - **Installing Anaconda Python Distribution for Python 3.6**:
@@ -60,7 +60,7 @@ __Hard drive size:__  1 TB SSD, 3TB SATA
   rm google-chrome-stable_current_amd64.deb
   ```
 
-- **Installing git**
+- **Configure the git**
   - ```sudo apt-get install git```
   - ```git config --global user.name "name"```
   - ```git config --global user.email "email"```
