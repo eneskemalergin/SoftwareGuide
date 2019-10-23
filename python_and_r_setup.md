@@ -64,4 +64,45 @@ Using Bioconductor requires ```BiocManager```.
   - [Package tutorial](https://jokergoo.github.io/ComplexHeatmap-reference/book/)
 - **preprocessCore** - ```BiocManager::install("preprocessCore")```
   - A collection of pre-processing functions
--
+
+## Installing Node.js for jupyterlab
+- ```conda install -c conda-forge nodejs```
+
+## Installing other useful Python packages
+
+- **BioPython** - ```conda install -c bioconda biopython```
+- **feather** - ```conda install -c conda-forge feather-format```
+- **Altair** - ```conda install -c conda-forge altair vega_datasets```
+- **PtitPrince** - ```conda install -c pog87 ptitprince```
+- **adjusttext** - ```conda install -c phlya adjusttext```
+- **Plotly** - ```conda install -c plotly plotly```
+  - Installing the plotly JuptyterLab extension:
+    ```
+    # Avoid "JavaScript heap out of memory" errors during extension installation
+    # (OS X/Linux)
+    export NODE_OPTIONS=--max-old-space-size=4096
+
+    # Jupyter widgets extension
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 --no-build
+
+    # jupyterlab renderer support
+    jupyter labextension install jupyterlab-plotly@1.1.0 --no-build
+
+    # FigureWidget support
+    jupyter labextension install plotlywidget@1.1.0 --no-build
+
+    # JupyterLab chart editor support (optional)
+    jupyter labextension install jupyterlab-chart-editor@1.2 --no-build
+
+    # Build extensions (must be done to activate extensions since --no-build is used above)
+    jupyter lab build
+
+    # Unset NODE_OPTIONS environment variable
+    # (OS X/Linux)
+    unset NODE_OPTIONS
+    ```
+
+## Installing JupyterLab extensions
+- **Table of Contents** - ```jupyter labextension install @jupyterlab/toc```
+- **NBextension Configurator** - ```conda install -c conda-forge jupyter_nbextensions_configurator```
+- **Contrib NBextennsions** - ```conda install -c conda-forge jupyter_contrib_nbextensions```
