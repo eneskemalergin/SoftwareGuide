@@ -43,15 +43,14 @@ Installing R and Rstudio is possible with conda, this allows a seamless integrat
   - [Package documentation](https://rformassspectrometry.github.io/RforMassSpectrometry/index.html)
 
 ### CRAN packages
+- **Tidyverse** - ```conda install -c r r-tidyverse```
 - **ggpubR** - ```conda install -c conda-forge r-ggpubr```
   - Publication ready plots
-- **Tidyverse** - ```conda install -c r r-tidyverse```
+- **Plotly** - ```conda install -c conda-forge r-plotly```
 - **circlize** - ```conda install -c conda-forge r-circlize```
   - Circular visualization package.
   - [Package github](https://github.com/jokergoo/circlize)
   - [Package tutorial](https://jokergoo.github.io/circlize_book/book/)
-- **pathfindR** - ```install.packages("pathfindR")```
-  - Package for enrichment analysis utilizing active subnetworks.
 - **devtools** - ```conda install -c conda-forge r-devtools```
 
 ### Github Packages
