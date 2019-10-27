@@ -102,7 +102,9 @@ To install github packages to the R environment within anaconda requires setting
     # (OS X/Linux)
     unset NODE_OPTIONS
     ```
-
+- **Prince** - ```pip install prince```
+  - Library for factor anaysis
+  
 ## Installing JupyterLab extensions
 Enable the extensions tab in the jupyterLab settings, which makes installing extensions easier.
 - **Table of Contents** - ```jupyter labextension install @jupyterlab/toc```
