@@ -51,6 +51,10 @@ Installing R and Rstudio is possible with conda, this allows a seamless integrat
   - Circular visualization package.
   - [Package github](https://github.com/jokergoo/circlize)
   - [Package tutorial](https://jokergoo.github.io/circlize_book/book/)
+- **FactoExtra** - ```conda install -c conda-forge r-factoextra```
+  - Multivariate data analsis package for visualizing
+  - [Package github](https://github.com/kassambara/factoextra)
+  - [Package documentation](https://rpkgs.datanovia.com/factoextra/index.html)
 - **devtools** - ```conda install -c conda-forge r-devtools```
 
 ### Github Packages
