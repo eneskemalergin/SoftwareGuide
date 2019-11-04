@@ -56,6 +56,8 @@ Installing R and Rstudio is possible with conda, this allows a seamless integrat
   - [Package github](https://github.com/kassambara/factoextra)
   - [Package documentation](https://rpkgs.datanovia.com/factoextra/index.html)
 - **devtools** - ```conda install -c conda-forge r-devtools```
+- **heplots** - ```conda install -c conda-forge r-heplots```
+  - Visualizing Hypothesis Tests in Multivariate Linear Models
 
 ### Github Packages
 To install github packages to the R environment within anaconda requires setting options before installing them with devtools:
