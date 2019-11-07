@@ -76,6 +76,7 @@ To install github packages to the R environment within anaconda requires setting
 - **BioPython** - ```conda install -c bioconda biopython```
 - **feather** - ```conda install -c conda-forge feather-format```
 - **Altair** - ```conda install -c conda-forge altair vega_datasets```
+- **fastcluster** - ```conda install -c conda-forge fastcluster```
 - **PtitPrince** - ```conda install -c pog87 ptitprince```
 - **adjusttext** - ```conda install -c phlya adjusttext```
 - **Plotly** - ```conda install -c plotly plotly```
