@@ -48,4 +48,29 @@ export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64
 - Then source the bashrc to apply the changes.
 - Check if CUDA is installed properly: ```nvcc -V```
 
+### Installing Nvidia Driver
+
+Before finishing this step, your computer display should not be able to have HD resolution. If you do, that’s because your Ubuntu automatically installed the Nouveu driver for you (Not a good thing)
+
+- [The fix](https://linuxconfig.org/how-to-disable-nouveau-nvidia-driver-on-ubuntu-18-04-bionic-beaver-linux)
+- [Nvidia driver download](https://www.nvidia.com/Download/Find.aspx)
+- I recommend version 430.4 because I haven’t ran into any compatibility issues with it so far.
+- ```chmod +x NVIDIA-Linux-x86_64–430.40.run```
+- ```sudo ./ NVIDIA-Linux-x86_64–430.40.run```
+- Then Reboot the computer: ```reboot```
+
+### Installing cuDNN
+This is the NVIDIA CUDA® Deep Neural Network library. It will be used for installing the gpu-accelerated libraries (eg. opencv)
+
+- [Signup & download cuDNN](https://developer.nvidia.com/cudnn)
+- ```tar -zxf file_name```
+- ```cd cuda```
+- ```sudo cp -P lib64/* /usr/local/cuda/lib64/```
+- ```sudo cp -P include/* /usr/local/cuda/include/```
+
+
+### Installing Tensorflow and PyTorch
+- ``` conda install tensorflow-gpu```
+- ``` conda install pytorch-gpu```
+
 
