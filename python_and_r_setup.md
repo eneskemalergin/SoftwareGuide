@@ -79,32 +79,8 @@ To install github packages to the R environment within anaconda requires setting
 - **fastcluster** - ```conda install -c conda-forge fastcluster```
 - **PtitPrince** - ```conda install -c pog87 ptitprince```
 - **adjusttext** - ```conda install -c phlya adjusttext```
-- **Plotly** - ```conda install -c plotly plotly dash jupyter-dash plotly_express```
-  - Installing the plotly JuptyterLab extension:
-    ```
-    # Avoid "JavaScript heap out of memory" errors during extension installation
-    # (OS X/Linux)
-    export NODE_OPTIONS=--max-old-space-size=4096
-
-    # Jupyter widgets extension
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 --no-build
-
-    # jupyterlab renderer support
-    jupyter labextension install jupyterlab-plotly@1.1.0 --no-build
-
-    # FigureWidget support
-    jupyter labextension install plotlywidget@1.1.0 --no-build
-
-    # JupyterLab chart editor support (optional)
-    jupyter labextension install jupyterlab-chart-editor@1.2 --no-build
-
-    # Build extensions (must be done to activate extensions since --no-build is used above)
-    jupyter lab build
-
-    # Unset NODE_OPTIONS environment variable
-    # (OS X/Linux)
-    unset NODE_OPTIONS
-    ```
+- **Plotly** - ```conda install -c plotly plotly plotly_express```
+- **Dash** - ```conda install -c plotly dash jupyter-dash```
 - **Prince** - ```pip install prince```
   - Library for factor anaysis
   
