@@ -68,8 +68,6 @@ To install github packages to the R environment within anaconda requires setting
 - **patchwork** - ```install_github("thomasp85/patchwork")```
   - Package to make combining plots simpler.
 
-## Installing Node.js for jupyterlab
-- ```conda install -c conda-forge nodejs```
 
 ## Installing other useful Python packages
 
@@ -84,8 +82,12 @@ To install github packages to the R environment within anaconda requires setting
 - **Prince** - ```pip install prince```
   - Library for factor anaysis
   
-## Installing JupyterLab extensions
+## Installing Node.js for jupyterlab
+- ```conda install -c nodejs```
+
+### Installing JupyterLab extensions
 Enable the extensions tab in the jupyterLab settings, which makes installing extensions easier.
+
 - **Table of Contents** - ```jupyter labextension install @jupyterlab/toc```
 - **NBextension Configurator** - ```conda install -c conda-forge jupyter_nbextensions_configurator```
 - **Contrib NBextennsions** - ```conda install -c conda-forge jupyter_contrib_nbextensions```
