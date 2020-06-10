@@ -79,7 +79,7 @@ To install github packages to the R environment within anaconda requires setting
 - **fastcluster** - ```conda install -c conda-forge fastcluster```
 - **PtitPrince** - ```conda install -c pog87 ptitprince```
 - **adjusttext** - ```conda install -c phlya adjusttext```
-- **Plotly** - ```conda install -c plotly plotly```
+- **Plotly** - ```conda install -c plotly plotly dash jupyter-dash plotly_express```
   - Installing the plotly JuptyterLab extension:
     ```
     # Avoid "JavaScript heap out of memory" errors during extension installation
