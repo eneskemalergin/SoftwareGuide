@@ -79,6 +79,7 @@ To install github packages to the R environment within anaconda requires setting
 - **adjusttext** - ```conda install -c phlya adjusttext```
 - **Plotly** - ```conda install -c plotly plotly plotly_express```
 - **Dash** - ```conda install -c plotly dash jupyter-dash```
+- **Cufflinks** - ```conda install -c conda-forge cufflinks-py```
 - **Prince** - ```pip install prince```
   - Library for factor anaysis
   
