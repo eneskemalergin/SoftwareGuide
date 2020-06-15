@@ -87,7 +87,7 @@ To install github packages to the R environment within anaconda requires setting
 - ```conda install -c nodejs```
 
 ### Installing JupyterLab extensions
-Enable the extensions tab in the jupyterLab settings, which makes installing extensions easier.
+Enable the extensions tab in the jupyterLab settings, which makes installing extensions easier. Many of the extension could be installed through the jupyterlab.
 
 - **Table of Contents** - ```jupyter labextension install @jupyterlab/toc```
 - **NBextension Configurator** - ```conda install -c conda-forge jupyter_nbextensions_configurator```
