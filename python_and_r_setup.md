@@ -82,6 +82,8 @@ To install github packages to the R environment within anaconda requires setting
 - **Cufflinks** - ```conda install -c conda-forge cufflinks-py```
 - **Prince** - ```pip install prince```
   - Library for factor anaysis
+- **Holoviz** - ```conda install -c pyviz holoviz```
+  - This is a hub of data visualization tools that allows better plots. 
   
 ## Installing Node.js for jupyterlab
 - ```conda install -c nodejs```
