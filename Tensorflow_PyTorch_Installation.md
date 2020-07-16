@@ -52,6 +52,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64
 
 Before finishing this step, your computer display should not be able to have HD resolution. If you do, that’s because your Ubuntu automatically installed the Nouveu driver for you (Not a good thing)
 
+> Nvidia drivers change in Ubuntu quite a lot needs to be updated for handling multiple deep learning libraries.
+
 - [The fix](https://linuxconfig.org/how-to-disable-nouveau-nvidia-driver-on-ubuntu-18-04-bionic-beaver-linux)
 - [Nvidia driver download](https://www.nvidia.com/Download/Find.aspx)
 - I recommend version 430.4 because I haven’t ran into any compatibility issues with it so far.
