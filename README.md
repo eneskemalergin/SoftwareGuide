@@ -2,25 +2,20 @@
 
 ### Specs of my computer
 
-__Operating System and System type / version:__ Ubuntu 16.04.2 LTS
+__Operating System and System type / version:__ Ubuntu 20.04.1 LTS
 
-__Processor type and speed:__ Ryzen 7 1700x, 16 Threat, 3.4 to 3.8 GHz
+__Processor type and speed:__ Ryzen 7 3950x, 32 Threat, 3.5 to 4.7 GHz
 
 __RAM amount:__ 32GB
 
-__GPU:__ Nvidia 1080 gtx, 8GB
+__GPU:__ Nvidia RTX 2080 Super, 8GB
 
-__Hard drive size:__ 256 GB M.2 SSD, 1 TB SSD, 2TB SATA
+__Hard drive size:__ 1 TB M.2 SSD, 2TB SATA
 
 
 ### Steps to Software Installation/Configuration
 - Install Nvidia drivers
-  > Ubuntu 16.04 Nvidia ppa now has 375 and it seems stable so we will go with that now.
-
-  - ```sudo add-apt-repository ppa:graphics-drivers/ppa```
-  - ```sudo apt update```
-  - ```sudo apt-get install nvidia-375```
-  - ```sudo reboot``` # Restarts your system
+  > Ubuntu 20.04's additional drivers installs NVIDIA drivers. 
 
 - Install some required packages:
 
