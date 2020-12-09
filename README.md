@@ -17,7 +17,7 @@
 - **Enable Additional Repos:** to expand the amount of packages by allowing other main ubuntu repositories.
   - Search and Open -> Software and Update App
   - Go to other software tab -> enable Canonical Partners
-- **Update the System:** to update the system to most updated version. 
+- **Update the System:** to update the system to most updated version.
   - ```sudo apt-get update && sudo apt-get upgrade -y```
 - **Install missing drivers:** Some drivers are installed automatically but at the time of writing I needed to install some hardware specific drivers.
   - Enable Nvidia driver:
@@ -38,11 +38,13 @@
   - ```sudo apt install gdebi-core```
   - ```sudo apt install vim git htop```
   - ```sudo apt install openjdk-11-jdk build-essential libcurl4```
+  - ```sudo apt install software-properties-common```
+  - ```sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev```
 - **Install media codecs and extras:**
   - ```sudo apt install ubuntu-restricted-extras```
   - ```sudo apt install libavcodec-extra```
   - ```sudo apt install libdvd-pkg```
-  
+
 ## Development Software
 
 - **Install Google Chrome:**
@@ -80,6 +82,14 @@
   - ```sudo snap install libreoffice```
 - **Install BleachBit**
   - ```sudo apt install bleachbit```
+- **Install PIA**
+  - Download the linux installer from [the link](https://www.privateinternetaccess.com/installer/x/download_installer_linux)
+  - ```cd ~/Downloads/```
+  - ```bash pia-linux-2.5.1-05676.run```
+  - Enter system memory for root/sudo
+  - Login with credentials in the GUI
+-
+
 
 ## Beautifying Ubuntu for more Personality
 
