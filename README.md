@@ -22,34 +22,7 @@ __Hard drive size:__ 1 TB M.2 SSD, 2TB SATA
   - ```sudo apt-get install openjdk-8-jdk git build-essential libcurl3-dev```
   - ```sudo apt-get install software-properties-common```
 
-- Installing CUDA
-  > We will first install the toolkit Go to [Nvidia CUDA Website](https://developer.nvidia.com/cuda-release-candidate-download). Choose **Linux > x86_64 > Ubuntu > 16.04 > deb(local)**
-
-  - ```sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb```
-  - ```sudo apt-get update```
-  - ```sudo apt-get install cuda```
-
-  > Then we add the path updates to the .bashrc with the following oneliners.
-
-  - ```export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}```
-  - ```export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}```
-
-  > To test the CUDA if it's working:
-
-  - ```cd /usr/local/cuda-8.0/samples/5_Simulations/nbody```
-  - ```sudo make```
-  - ```./nbody```
-
-
-- Install cuDNN
-    > Go to [Nvidia cuDNN website](https://developer.nvidia.com/cudnn) download the latest for CUDA 8.0 and linux  Carefull because we will be using cuDNN v5.1 for our setup.
-
-    ```BASH
-    $ sudo tar -xzvf cudnn-8.0-linux-x64-v5.1.tgz
-    $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include
-    $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
-    $ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
-    ```
+> *Deep Learning related packages installation is moved to its own file.*
 
 - Install Anaconda Python Distribution
   > Anaconda distribution is really easy Python distributor that I can manage my libraries.
