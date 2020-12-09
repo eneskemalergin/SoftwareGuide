@@ -1,4 +1,4 @@
-## My Software Guide 16.04 Edition
+## Software Guide 16.04 Edition
 
 ### Specs of my computer
 
