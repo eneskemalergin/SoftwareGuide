@@ -88,7 +88,6 @@
   - ```bash pia-linux-2.5.1-05676.run```
   - Enter system memory for root/sudo
   - Login with credentials in the GUI
--
 
 
 ## Beautifying Ubuntu for more Personality
@@ -100,3 +99,13 @@
   - First activate the the extensions on Gnome Tweak tool tab called Extensions
   - ```sudo apt-get install chrome-gnome-shell```
     - OpenWeather
+- **New Theme for System**:
+  - Flat-Remix:
+    - ```sudo add-apt-repository ppa:daniruiz/flat-remix```
+    - ```sudo apt update```
+    - ```sudo apt install flat-remix-gnome flat-remix-gtk flat-remix```
+  - Numix:
+    - ```sudo apt install numix-gtk-theme```
+    
+- **Icon Themes:** gives more flavours to the icons
+  - *Obsidian-icon-theme*: ```sudo apt-get install obsidian-icon-theme```
