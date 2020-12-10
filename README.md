@@ -88,8 +88,17 @@
   - ```bash pia-linux-2.5.1-05676.run```
   - Enter system memory for root/sudo
   - Login with credentials in the GUI
-
-
+- **Install Calibre Ebook Server**
+  - ```sudo apt install libfontconfig libgl1-mesa-glx```
+  - ```sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin```  
+- **Install GlobalProtect**
+  - Get the linux installer given by IT
+  - ```sudo deb -i sudo dpkg -i GlobalProtect_deb-4.1.0.0-91.deb```
+- **Configure Groupdrive Access through GlobalProtect**
+  - Add GlobalProtect connect and disconnect in the bashrc
+  - Connect Global Protect then enter the group drive server address
+  - Add the server to the bookmark
+  
 ## Beautifying Ubuntu for more Personality
 
 - **Gnome Tweak Tool:** offering more control over the system especially on visual aspects.
@@ -106,6 +115,8 @@
     - ```sudo apt install flat-remix-gnome flat-remix-gtk flat-remix```
   - Numix:
     - ```sudo apt install numix-gtk-theme```
-    
+    - ```sudo add-apt-repository ppa:numix/ppa```
+    - ```sudo apt install numix-icon-theme numix-icon-theme-circle numix-icon-theme-square```
+
 - **Icon Themes:** gives more flavours to the icons
   - *Obsidian-icon-theme*: ```sudo apt-get install obsidian-icon-theme```
