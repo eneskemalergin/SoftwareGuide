@@ -1,0 +1,8 @@
+## My Setup with Miniconda
+
+- conda update --all
+- conda install -c conda-forge nodejs
+- conda install -c conda-forge jupyterlab
+- conda install -c conda-forge feather-format
+- conda install numpy pandas scipy matplotlib sympy seaborn
+- conda install -c conda-forge dash jupyter-dash
